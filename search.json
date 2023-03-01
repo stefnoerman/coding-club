@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "coding-club",
-    "section": "",
-    "text": "Making websites\n\n\n\n\n\n\n\nquarto\n\n\nwebsites\n\n\n\n\nHow to make a simple Quarto website\n\n\n\n\n\n\nMar 1, 2023\n\n\nAnders Askeland\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "posts/making-websites/index.html",
     "href": "posts/making-websites/index.html",
     "title": "Making websites",
@@ -54,5 +40,12 @@
     "title": "Making websites",
     "section": "Host your blog",
     "text": "Host your blog\nWhile we now have successfully created a blog, it is currently only stores locally on our own computer. It is not accessible from the internet.\nThere are a multitude of methods to host our blog. We will show you how to use GitHub (GitHub account required) to host a website in our next session."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R Coding Club",
+    "section": "",
+    "text": "Making websites\n\n\n\n\n\n\n\nquarto\n\n\nwebsites\n\n\n\n\nHow to make a simple Quarto website\n\n\n\n\n\n\nMar 1, 2023\n\n\nAnders Askeland\n\n\n\n\n\n\nNo matching items"
   }
 ]

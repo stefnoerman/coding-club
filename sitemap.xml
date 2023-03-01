@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/rostools/coding-club/about.html</loc>
-    <lastmod>2023-03-01T11:56:57.330Z</lastmod>
+    <loc>https://github.com/rostools/coding-club/posts/making-websites/index.html</loc>
+    <lastmod>2023-03-01T15:49:10.703Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/rostools/coding-club/index.html</loc>
-    <lastmod>2023-03-01T11:56:57.610Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/rostools/coding-club/posts/making-websites/index.html</loc>
-    <lastmod>2023-03-01T11:56:57.879Z</lastmod>
+    <lastmod>2023-03-01T15:49:11.363Z</lastmod>
   </url>
 </urlset>
