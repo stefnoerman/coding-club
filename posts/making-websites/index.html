@@ -209,62 +209,64 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <p>Quarto is a open-source scientific and technical publishing system that allows us to create a variety of different outputs. This includes outputs such as PDF, Word files, or HTML documents. But in addition, Quarto has a inbuilt static site generator, with great integration with R and Python code.</p>
-<section id="creating-a-quarto-blog" class="level3">
-<h3 class="anchored" data-anchor-id="creating-a-quarto-blog">Creating a Quarto blog</h3>
-<p>A quarto blog can be created in one single workflow. To create a new quarto blog select File -&gt; New Project -&gt; Quarto blog, decide on a name and select a folder where to store it, and press Create Project.</p>
+<section id="creating-a-quarto-blog" class="level2">
+<h2 class="anchored" data-anchor-id="creating-a-quarto-blog">Creating a Quarto blog</h2>
+<p>A quarto blog can be created in one single workflow. To create a new quarto blog select <code>File -&gt; New Project -&gt; Quarto blog</code>, decide on a name and select a folder where to store it, and press Create Project.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/create_blog.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Create a blog post</figcaption><p></p>
 </figure>
 </div>
-<p><strong>Quarto files</strong></p>
+<section id="quarto-files" class="level3">
+<h3 class="anchored" data-anchor-id="quarto-files">Quarto files</h3>
 <p>After having created a Quarto blog, your RStudio will open a session that is populated with a variety of files and folders. Some of these files contain settings related to the blog, while other contains data. The files most important include:</p>
 <ul>
 <li><code>_quarto.yml</code> - Defines how the blog will be rendered.</li>
 <li><code>index.qmd</code> - Defines the content of your blog landing page.</li>
 <li><code>styles.css</code> - Defines the theme.</li>
 </ul>
-<p>You might also notice a folder called <code>posts</code>. As the name implies, this folder will contain our blog posts.</p>
+<p>You might also notice a folder called <code>posts/</code>. As the name implies, this folder will contain our blog posts.</p>
 </section>
-<section id="create-landing-page" class="level3">
-<h3 class="anchored" data-anchor-id="create-landing-page">Create landing page</h3>
+</section>
+<section id="create-landing-page" class="level2">
+<h2 class="anchored" data-anchor-id="create-landing-page">Create landing page</h2>
 <p>One of the first things we want to do is edit our blog landing page. For this example, we only want to change the title. The title can be changed by altering the title in <code>index.qmd</code>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"My blog"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>listing<span class="sc">:</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  contents<span class="sc">:</span> posts</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  sort<span class="sc">:</span> <span class="st">"date desc"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  type<span class="sc">:</span> default</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  categories<span class="sc">:</span> true</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  sort<span class="sc">-</span>ui<span class="sc">:</span> false</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  filter<span class="sc">-</span>ui<span class="sc">:</span> false</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>page<span class="sc">-</span>layout<span class="sc">:</span> full</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>title<span class="sc">-</span>block<span class="sc">-</span>banner<span class="sc">:</span> true</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My blog"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">listing</span><span class="kw">:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> posts</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">sort</span><span class="kw">:</span><span class="at"> </span><span class="st">"date desc"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">categories</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">sort-ui</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">filter-ui</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">page-layout</span><span class="kw">:</span><span class="at"> full</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">title-block-banner</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="define-blog-settings" class="level3">
-<h3 class="anchored" data-anchor-id="define-blog-settings">Define blog settings</h3>
-<p>In addition to editing the landing page, we can should also define blog specific settings. These settings are all defined inside the <code>_quarto.yml</code> file. Lets change the website title and add a link to our Github repository to the navigation bar by changing the <code>_quarto.yml</code> file to the following.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>project<span class="sc">:</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  type<span class="sc">:</span> website</span>
+<section id="define-blog-settings" class="level2">
+<h2 class="anchored" data-anchor-id="define-blog-settings">Define blog settings</h2>
+<p>In addition to editing the landing page, we can should also define blog specific settings. These settings are all defined inside the <code>_quarto.yml</code> file. Lets change the website title and add a link to our GitHub repository to the navigation bar by changing the <code>_quarto.yml</code> file to the following.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>website<span class="sc">:</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  title<span class="sc">:</span> <span class="st">"My blog"</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  navbar<span class="sc">:</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    right<span class="sc">:</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>      <span class="sc">-</span> about.qmd</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>      <span class="sc">-</span> icon<span class="sc">:</span> github</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>rostools<span class="sc">/</span>coding<span class="sc">-</span>club</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>format<span class="sc">:</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  html<span class="sc">:</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    theme<span class="sc">:</span> cosmo</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    css<span class="sc">:</span> styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My blog"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> about.qmd</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/rostools/coding-club</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="create-a-blog-post" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-blog-post">Create a blog post</h3>
-<p>To create a blog post, we need to go into the <code>posts</code> folder. From here we can see that there already exists two example blog posts, “welcome” and “post-with-code”. Lets delete those and create our own post.</p>
-<p>After deleting the example blog posts, create a new folder called “first-blog-post”. Inside this folder create a <code>.qmd</code> file called <code>index.qmd</code>. Your folders should look like this:</p>
+<section id="create-a-blog-post" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-blog-post">Create a blog post</h2>
+<p>To create a blog post, we need to go into the <code>posts/</code> folder. From here we can see that there already exists two example blog posts, “welcome” and “post-with-code”. Lets delete those and create our own post.</p>
+<p>After deleting the example blog posts, create a new folder called <code>"first-blog-post"</code>. Inside this folder create a <code>.qmd</code> file called <code>index.qmd</code>. Your folders should look like this:</p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
@@ -289,31 +291,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>Now, we can open the <code>index.qmd</code> file and start writing our first blog post.</p>
 <p>At the very top, we need to define some post metadata in the form of YAML. We want to define a title, description, author, date, and categories. Lets add the following to our <code>index.qmd</code>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"My first blog post"</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>description<span class="sc">:</span> <span class="st">"My first blog post using Quarto"</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>author<span class="sc">:</span> <span class="st">"Anders Askeland"</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>date<span class="sc">:</span> last<span class="sc">-</span>modified</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>categories<span class="sc">:</span> </span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span> blog</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span> first</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Now we need to write our actual text body. To write our text body, we will write using <a href="https://daringfireball.net/projects/markdown/">Markdown</a>, a simple and easy to use markup language.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My first blog post"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> </span><span class="st">"My first blog post using Quarto"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Anders Askeland"</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> last-modified</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">categories</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> blog</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> first</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now we need to write our actual text body. To write our text body, we will write using <a href="https://quarto.org/docs/authoring/markdown-basics.html">Markdown</a>, a simple and easy to use markup language.</p>
 <p>Lets add the following text body.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"My first blog post"</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>description<span class="sc">:</span> <span class="st">"My first blog post using Quarto"</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>author<span class="sc">:</span> <span class="st">"Anders Askeland"</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>date<span class="sc">:</span> last<span class="sc">-</span>modified</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>categories<span class="sc">:</span> </span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span> blog</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span> first</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My first blog post"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> </span><span class="st">"My first blog post using Quarto"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Anders Askeland"</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> last-modified</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">categories</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> blog</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> first</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># My first blog post</span></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>This is my first blog post.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="at">This is my first blog post.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="render-the-blog" class="level3">
 <h3 class="anchored" data-anchor-id="render-the-blog">Render the blog</h3>
 <p>Up until now, we have only been working in files and folders. But, how do we actually create a blog? This is where Quarto as a static site generate comes in, where we can use Quarto to automatically render us a blog website.</p>
@@ -325,13 +326,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </figure>
 </div>
 <p>When having render the blog, the landing page should look like this:</p>
-<p><img src="images/image-1875593265.png" class="img-fluid">When viewing our blog post we should see:<img src="images/image-1734744906.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/rendered-landing-page.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Landing page to website</figcaption><p></p>
+</figure>
+</div>
+<p>When viewing our blog post we should see:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/rendered-blog-post.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Blog post on website</figcaption><p></p>
+</figure>
+</div>
 </section>
-<section id="host-your-blog" class="level3">
-<h3 class="anchored" data-anchor-id="host-your-blog">Host your blog</h3>
+</section>
+<section id="host-your-blog" class="level2">
+<h2 class="anchored" data-anchor-id="host-your-blog">Host your blog</h2>
 <p>While we now have successfully created a blog, it is currently only stores locally on our own computer. It is not accessible from the internet.</p>
-<p>There are a multitude of methods to host our blog, we will show you how to use Github (Github account required).</p>
-<p>TODO</p>
+<p>There are a multitude of methods to host our blog. We will show you how to use GitHub (GitHub account required) to host a website in our next session.</p>
 
 
 </section>
