@@ -2,7 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/making-websites/index.html"
+      "/posts/making-websites/index.html",
+      "/posts/branches-and-actions/index.html"
     ]
   }
 ]
